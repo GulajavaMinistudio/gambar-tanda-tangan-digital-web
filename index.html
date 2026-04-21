@@ -1,0 +1,1319 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TTDigital membantu Anda membuat, menyesuaikan, dan menyimpan gambar tanda tangan dengan cepat dalam format JPG atau PNG langsung dari perangkat Android"
+    />
+    <meta
+      name="keywords"
+      content="gambar tanda tangan, tanda tangan tulisan tangan, TTDigital, signature pad, JPG, PNG"
+    />
+    <meta name="author" content="TTDigital Team" />
+    <meta name="theme-color" content="#005232" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TTDigital" />
+    <meta
+      property="og:title"
+      content="TTDigital - Solusi Gambar Tanda Tangan Praktis"
+    />
+    <meta
+      property="og:description"
+      content="Buat, sesuaikan, dan simpan gambar tanda tangan tulisan tangan dengan cepat dalam format JPG atau PNG langsung dari perangkat Android Anda."
+    />
+    <meta property="og:image" content="android-chrome-512x512.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="TTDigital - Solusi Gambar Tanda Tangan Praktis"
+    />
+    <meta
+      name="twitter:description"
+      content="Buat dan simpan gambar tanda tangan tulisan tangan secara cepat, rapi, dan nyaman langsung dari perangkat Android Anda."
+    />
+    <meta name="twitter:image" content="android-chrome-512x512.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <title>TTDigital - Solusi Gambar Tanda Tangan Praktis</title>
+    <style>
+      /* ============================================
+           RESET & BASE STYLES
+           ============================================ */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+
+      body {
+        font-family: "Google Sans", "Segoe UI", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fff;
+      }
+
+      /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: 1.2;
+        font-weight: 700;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s ease;
+      }
+
+      /* ============================================
+           LAYOUT & SPACING
+           ============================================ */
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .col {
+        flex: 1;
+        min-width: 280px;
+      }
+
+      .col-full {
+        flex: 0 0 100%;
+      }
+
+      .col-half {
+        flex: 0 0 calc(50% - 1rem);
+      }
+
+      .col-third {
+        flex: 0 0 calc(33.333% - 1.35rem);
+      }
+
+      /* ============================================
+           NAVIGATION
+           ============================================ */
+      header {
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+      }
+
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.875rem;
+        font-weight: 700;
+        color: #005232;
+      }
+
+      .logo-badge {
+        width: 46px;
+        height: 46px;
+        padding: 2px;
+        flex-shrink: 0;
+        border-radius: 16px;
+        background: linear-gradient(180deg, #fdfefb 0%, #f3f7ef 100%);
+        border: 1px solid rgba(0, 82, 50, 0.08);
+        box-shadow: 0 10px 24px rgba(0, 82, 50, 0.12);
+      }
+
+      .logo-badge img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+      }
+
+      .logo-mark {
+        font-size: 1.5rem;
+        line-height: 1;
+        letter-spacing: -0.03em;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-menu a {
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-menu a:hover {
+        color: #005232;
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 0.35rem;
+      }
+
+      .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+
+      /* ============================================
+           BUTTONS
+           ============================================ */
+      .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .btn-primary {
+        background-color: #005232;
+        color: #fff;
+      }
+
+      .btn-primary:hover {
+        background-color: #003d24;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 82, 50, 0.3);
+      }
+
+      .btn-secondary {
+        background-color: #f0f0f0;
+        color: #333;
+        border: 2px solid #005232;
+      }
+
+      .btn-secondary:hover {
+        background-color: #005232;
+        color: #fff;
+      }
+
+      .btn-lg {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+      }
+
+      /* ============================================
+           HERO SECTION
+           ============================================ */
+      .hero {
+        background: linear-gradient(135deg, #005232 0%, #003d24 100%);
+        color: #fff;
+        padding: 6rem 0;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        color: #fff;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-content p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      /* ============================================
+           CARDS
+           ============================================ */
+      .card {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        transform: translateY(-4px);
+      }
+
+      .card-icon {
+        width: 60px;
+        height: 60px;
+        background-color: #e8f5e9;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .card h3 {
+        color: #005232;
+        margin-bottom: 0.5rem;
+      }
+
+      .card p {
+        color: #666;
+        font-size: 0.95rem;
+      }
+
+      /* ============================================
+           SECTIONS
+           ============================================ */
+      section {
+        padding: 4rem 0;
+      }
+
+      section:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-title h2 {
+        color: #005232;
+        margin-bottom: 0.5rem;
+      }
+
+      .section-title p {
+        color: #666;
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* ============================================
+           FEATURES SECTION
+           ============================================ */
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      /* ============================================
+           FOOTER
+           ============================================ */
+      footer {
+        background: linear-gradient(135deg, #003d24 0%, #002518 100%);
+        color: rgba(255, 255, 255, 0.85);
+        padding: 3rem 0 1rem;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-section h4 {
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+
+      .footer-section ul {
+        list-style: none;
+      }
+
+      .footer-section ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-section a {
+        color: rgba(255, 255, 255, 0.75);
+        transition: color 0.3s ease;
+      }
+
+      .footer-section a:hover {
+        color: #fff;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        padding-top: 2rem;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.55);
+      }
+
+      /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+      @media (max-width: 768px) {
+        html {
+          font-size: 14px;
+        }
+
+        .container {
+          padding: 0 1rem;
+        }
+
+        /* Navigation */
+        .nav-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          left: 0;
+          flex-direction: column;
+          background-color: #fff;
+          padding: 1rem;
+          gap: 1rem;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-menu.active {
+          display: flex;
+        }
+
+        .hamburger {
+          display: flex;
+        }
+
+        /* Typography */
+        h1 {
+          font-size: 2rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        h3 {
+          font-size: 1.25rem;
+        }
+
+        /* Layout */
+        .col-half,
+        .col-third {
+          flex: 0 0 100%;
+        }
+
+        .row {
+          gap: 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+          padding: 4rem 0;
+        }
+
+        .hero-content p {
+          font-size: 1rem;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+        }
+
+        .btn {
+          width: 100%;
+        }
+
+        /* Sections */
+        section {
+          padding: 2.5rem 0;
+        }
+
+        .section-title {
+          margin-bottom: 2rem;
+        }
+
+        .features {
+          gap: 1.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        html {
+          font-size: 13px;
+        }
+
+        .container {
+          padding: 0 0.75rem;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        h2 {
+          font-size: 1.25rem;
+        }
+
+        h3 {
+          font-size: 1rem;
+        }
+
+        .navbar {
+          padding: 0.75rem 0;
+        }
+
+        .logo {
+          gap: 0.65rem;
+        }
+
+        .logo-badge {
+          width: 40px;
+          height: 40px;
+          padding: 2px;
+          border-radius: 14px;
+        }
+
+        .logo-mark {
+          font-size: 1.25rem;
+        }
+
+        .nav-menu {
+          gap: 0.5rem;
+        }
+
+        .nav-menu a {
+          padding: 0.5rem 0;
+        }
+
+        .btn {
+          padding: 0.65rem 1.25rem;
+          font-size: 0.95rem;
+        }
+
+        .card {
+          padding: 1.5rem;
+        }
+
+        .hero {
+          padding: 3rem 0;
+        }
+
+        section {
+          padding: 2rem 0;
+        }
+
+        .footer-content {
+          gap: 1.5rem;
+        }
+      }
+
+      /* ============================================
+           UTILITY CLASSES
+           ============================================ */
+      .text-center {
+        text-align: center;
+      }
+
+      .text-primary {
+        color: #005232;
+      }
+
+      .mt-1 {
+        margin-top: 0.5rem;
+      }
+      .mt-2 {
+        margin-top: 1rem;
+      }
+      .mt-3 {
+        margin-top: 1.5rem;
+      }
+      .mt-4 {
+        margin-top: 2rem;
+      }
+
+      .mb-1 {
+        margin-bottom: 0.5rem;
+      }
+      .mb-2 {
+        margin-bottom: 1rem;
+      }
+      .mb-3 {
+        margin-bottom: 1.5rem;
+      }
+      .mb-4 {
+        margin-bottom: 2rem;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      /* ============================================
+           PHONE MOCKUP
+           ============================================ */
+      .phone-mockup {
+        position: relative;
+        width: min(286px, 100%);
+        background: linear-gradient(180deg, #171717 0%, #0f0f0f 100%);
+        border-radius: 48px;
+        padding: 30px 10px 20px;
+        box-shadow:
+          inset 0 0 0 1px #3a3a3a,
+          0 35px 80px rgba(0, 0, 0, 0.35);
+        margin: 0 auto;
+        flex-shrink: 0;
+      }
+
+      /* Speaker notch */
+      .phone-mockup::before {
+        content: "";
+        position: absolute;
+        top: 14px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 58px;
+        height: 5px;
+        background: #2e2e2e;
+        border-radius: 3px;
+        z-index: 10;
+      }
+
+      /* Navigation pill */
+      .phone-mockup::after {
+        content: "";
+        position: absolute;
+        bottom: 3px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 38px;
+        height: 4px;
+        background: #2e2e2e;
+        border-radius: 2px;
+      }
+
+      .phone-btn-vol {
+        position: absolute;
+        left: -3px;
+        width: 3px;
+        background: #2a2a2a;
+        border-radius: 2px 0 0 2px;
+      }
+
+      .phone-btn-vol-up {
+        top: 78px;
+        height: 30px;
+      }
+
+      .phone-btn-vol-down {
+        top: 118px;
+        height: 52px;
+      }
+
+      .phone-btn-power {
+        position: absolute;
+        right: -3px;
+        top: 98px;
+        width: 3px;
+        height: 60px;
+        background: #2a2a2a;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .phone-screen {
+        border-radius: 18px;
+        overflow: hidden;
+        aspect-ratio: 9 / 16;
+        background: #f7f8f4;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+      }
+
+      .phone-screen img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center top;
+        display: block;
+        background: transparent;
+        transition: opacity 0.35s ease;
+      }
+
+      /* ============================================
+           SCREENSHOTS SECTION
+           ============================================ */
+      #screenshot {
+        background: linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 100%);
+      }
+
+      /* Preserve backgrounds after section count shift */
+      #tentang {
+        background-color: #f9f9f9;
+      }
+
+      #kontak {
+        background-color: #f9f9f9;
+      }
+
+      .screenshots-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+      }
+
+      .screenshots-nav {
+        flex: 1;
+        min-width: 240px;
+        max-width: 420px;
+      }
+
+      .screenshots-nav h3 {
+        color: #005232;
+        margin-bottom: 0.5rem;
+      }
+
+      .screenshots-nav .nav-desc {
+        color: #666;
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .screenshot-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .screenshot-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.65rem 0.85rem;
+        border-radius: 8px;
+        cursor: pointer;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.2s ease;
+        border-left: 3px solid transparent;
+        margin-bottom: 0.25rem;
+      }
+
+      .screenshot-list li:hover {
+        background: rgba(0, 82, 50, 0.07);
+        color: #005232;
+      }
+
+      .screenshot-list li.active {
+        background: rgba(0, 82, 50, 0.12);
+        color: #005232;
+        font-weight: 600;
+        border-left-color: #005232;
+      }
+
+      .screenshot-list .sc-icon {
+        font-size: 1.1rem;
+        flex-shrink: 0;
+        width: 1.5rem;
+        text-align: center;
+      }
+
+      .screenshots-phone {
+        flex-shrink: 0;
+      }
+
+      .screenshots-phone .phone-mockup {
+        width: min(330px, calc(100vw - 3rem));
+      }
+
+      .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 0.4rem;
+        margin-top: 1rem;
+      }
+
+      .carousel-dots button {
+        height: 8px;
+        width: 8px;
+        border-radius: 4px;
+        border: none;
+        background: #b0ccb8;
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.3s ease;
+      }
+
+      .carousel-dots button.active {
+        background: #005232;
+        width: 22px;
+      }
+
+      @media (max-width: 768px) {
+        .screenshots-wrapper {
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        .screenshots-nav {
+          max-width: 100%;
+          width: 100%;
+        }
+
+        .phone-mockup {
+          width: min(244px, calc(100vw - 2rem));
+        }
+
+        .screenshots-phone .phone-mockup {
+          width: min(292px, calc(100vw - 2rem));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ============================================
+         HEADER & NAVIGATION
+         ============================================ -->
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a class="logo" href="#beranda" aria-label="TTDigital beranda">
+            <span class="logo-badge" aria-hidden="true">
+              <img src="assets/icons/ic_splash_page.png" alt="" />
+            </span>
+            <span class="logo-mark">TTDigital</span>
+          </a>
+          <button
+            class="hamburger"
+            id="hamburgerBtn"
+            aria-label="Toggle navigation menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#fitur">Fitur</a></li>
+            <li><a href="#screenshot">Tampilan</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero" id="beranda">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Solusi Praktis untuk Membuat Gambar Tanda Tangan</h1>
+          <p>
+            TTDigital membantu Anda menggambar, menyesuaikan, dan menyimpan
+            tanda tangan tulisan tangan secara cepat, rapi, dan nyaman langsung
+            dari perangkat Android Anda.
+          </p>
+          <div class="hero-buttons">
+            <a
+              class="btn btn-primary btn-lg"
+              href="https://play.google.com/store/apps/details?id=gulajava.tandatangan"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Unduh Aplikasi</a
+            >
+            <a class="btn btn-secondary btn-lg" href="#fitur"
+              >Lihat Fitur Utama</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         FEATURES SECTION
+         ============================================ -->
+    <section id="fitur">
+      <div class="container">
+        <div class="section-title">
+          <h2>Fitur Unggulan</h2>
+          <p>
+            Dirancang untuk menghadirkan proses yang sederhana, efisien, dan
+            nyaman saat membuat gambar tanda tangan
+          </p>
+        </div>
+        <div class="features">
+          <div class="card">
+            <div class="card-icon">📝</div>
+            <h3>Gambar Tanda Tangan</h3>
+            <p>
+              Buat goresan tanda tangan langsung di layar dengan respons yang
+              halus dan terasa natural.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">💾</div>
+            <h3>Simpan sebagai Gambar</h3>
+            <p>
+              Ekspor hasil tanda tangan ke galeri perangkat dalam format JPG
+              atau PNG sesuai kebutuhan Anda.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🎨</div>
+            <h3>Pilih Warna</h3>
+            <p>
+              Sesuaikan warna goresan untuk menghasilkan tampilan tanda tangan
+              yang lebih personal dan jelas.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Performa Cepat</h3>
+            <p>
+              Aplikasi ringan dengan performa responsif untuk penggunaan harian
+              tanpa hambatan.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🔒</div>
+            <h3>Privasi Terjaga</h3>
+            <p>
+              Hasil disimpan secara lokal di perangkat Anda sehingga privasi
+              tetap lebih terjaga.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📱</div>
+            <h3>Siap di Android</h3>
+            <p>Kompatibel dengan berbagai perangkat Android modern.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SCREENSHOTS SECTION
+         ============================================ -->
+    <section id="screenshot">
+      <div class="container">
+        <div class="section-title">
+          <h2>Tampilan Aplikasi</h2>
+          <p>Antarmuka yang ringkas, intuitif, dan mudah dipahami sejak awal</p>
+        </div>
+        <div class="screenshots-wrapper">
+          <div class="screenshots-nav">
+            <h3>Jelajahi Fitur</h3>
+            <p class="nav-desc">
+              Lihat alur penggunaan aplikasi melalui setiap tampilan utama di
+              bawah ini
+            </p>
+            <ul class="screenshot-list" id="screenshotList">
+              <li class="active" data-index="0">
+                <span class="sc-icon">🏠</span> Menu Utama
+              </li>
+              <li data-index="1">
+                <span class="sc-icon">✏️</span> Kanvas Menggambar
+              </li>
+              <li data-index="2">
+                <span class="sc-icon">✍️</span> Tanda Tangan Selesai
+              </li>
+              <li data-index="3">
+                <span class="sc-icon">🎨</span> Pilih Warna Goresan
+              </li>
+              <li data-index="4">
+                <span class="sc-icon">💾</span> Simpan ke Galeri
+              </li>
+              <li data-index="5">
+                <span class="sc-icon">❓</span> Panduan Penggunaan
+              </li>
+              <li data-index="6">
+                <span class="sc-icon">ℹ️</span> Tentang Aplikasi
+              </li>
+            </ul>
+          </div>
+          <div class="screenshots-phone">
+            <div class="phone-mockup">
+              <div class="phone-btn-vol phone-btn-vol-up"></div>
+              <div class="phone-btn-vol phone-btn-vol-down"></div>
+              <div class="phone-btn-power"></div>
+              <div class="phone-screen">
+                <img
+                  id="carouselImage"
+                  src="assets/screenshots/01-main-menu.png"
+                  alt="Menu Utama TTDigital"
+                />
+              </div>
+            </div>
+            <div
+              class="carousel-dots"
+              id="carouselDots"
+              role="tablist"
+              aria-label="Navigasi screenshot"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT SECTION
+         ============================================ -->
+    <section id="tentang">
+      <div class="container">
+        <div class="section-title">
+          <h2>Tentang TTDigital</h2>
+          <p>
+            Dirancang untuk membantu Anda membuat gambar tanda tangan dengan
+            lebih praktis
+          </p>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>
+              TTDigital adalah aplikasi Android offline yang membantu Anda
+              membuat gambar tanda tangan tulisan tangan secara cepat dan mudah,
+              lalu menyimpannya sebagai file JPG atau PNG.
+            </p>
+            <p>
+              Fokus utamanya adalah memberikan alat yang praktis untuk kebutuhan
+              administrasi ringan, pelengkap dokumen, dan penggunaan visual
+              sehari-hari langsung dari perangkat Anda.
+            </p>
+          </div>
+          <div class="col" style="text-align: center">
+            <div class="phone-mockup">
+              <div class="phone-btn-vol phone-btn-vol-up"></div>
+              <div class="phone-btn-vol phone-btn-vol-down"></div>
+              <div class="phone-btn-power"></div>
+              <div class="phone-screen">
+                <img
+                  src="assets/screenshots/03-workspace-drawing.png"
+                  alt="TTDigital — Kanvas tanda tangan"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CALL TO ACTION SECTION
+         ============================================ -->
+    <section class="hero" id="cta">
+      <div class="container">
+        <div class="section-title">
+          <h1 style="color: #fff">Siap Mulai Menggunakan TTDigital?</h1>
+          <p style="color: rgba(255, 255, 255, 0.9)">
+            Unduh aplikasinya sekarang dan nikmati cara yang lebih praktis untuk
+            membuat gambar tanda tangan langsung dari perangkat Anda
+          </p>
+        </div>
+        <div class="hero-buttons">
+          <a
+            class="btn btn-primary btn-lg"
+            href="https://play.google.com/store/apps/details?id=gulajava.tandatangan"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Unduh di Google Play</a
+          >
+          <a class="btn btn-secondary btn-lg" href="#screenshot"
+            >Pelajari Panduan</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+         ============================================ -->
+    <section id="kontak">
+      <div class="container">
+        <div class="section-title">
+          <h2>Hubungi Kami</h2>
+          <p>
+            Untuk pertanyaan, masukan, atau kebutuhan informasi lebih lanjut,
+            silakan hubungi kami melalui email berikut.
+          </p>
+        </div>
+        <div class="row" style="justify-content: center">
+          <div class="col" style="max-width: 420px">
+            <div class="card text-center">
+              <h3 class="text-primary">Email</h3>
+              <p>
+                <a href="mailto:gulajava.mini@gmail.com"
+                  >gulajava.mini@gmail.com</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>TTDigital</h4>
+            <p>
+              Solusi praktis dan efisien untuk membuat serta menyimpan gambar
+              tanda tangan langsung dari perangkat Anda.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Navigasi</h4>
+            <ul>
+              <li><a href="#beranda">Beranda</a></li>
+              <li><a href="#fitur">Fitur</a></li>
+              <li><a href="#tentang">Tentang</a></li>
+              <li><a href="#kontak">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Kebijakan</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://gulajavaministudio.github.io/privacy-policy-gambar-tanda-tangan-digital/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Privasi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://gulajavaministudio.github.io/privacy-policy-gambar-tanda-tangan-digital/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Syarat &amp; Ketentuan</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear">2026</span> TTDigital &middot; Dibuat
+            dengan sepenuh hati ❤️ di Indonesia
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+      // Auto-update footer year
+      const currentYearElement = document.getElementById("currentYear");
+      if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+      }
+
+      // Mobile Menu Toggle
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const navMenu = document.getElementById("navMenu");
+
+      hamburgerBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+
+      // Close menu when link is clicked
+      const navLinks = navMenu.querySelectorAll("a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+        });
+      });
+
+      // Smooth scroll untuk link navigasi
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // ============================================================
+      // Screenshot Carousel
+      // ============================================================
+      const screenshots = [
+        { src: "assets/screenshots/01-main-menu.png", label: "Menu Utama" },
+        {
+          src: "assets/screenshots/02-workspace-empty.png",
+          label: "Kanvas Menggambar",
+        },
+        {
+          src: "assets/screenshots/03-workspace-drawing.png",
+          label: "Tanda Tangan Selesai",
+        },
+        {
+          src: "assets/screenshots/04-color-picker.png",
+          label: "Pilih Warna Goresan",
+        },
+        {
+          src: "assets/screenshots/05-save-dialog.png",
+          label: "Simpan ke Galeri",
+        },
+        {
+          src: "assets/screenshots/06-help.png",
+          label: "Panduan Penggunaan",
+        },
+        {
+          src: "assets/screenshots/07-about.png",
+          label: "Tentang Aplikasi",
+        },
+      ];
+
+      let activeIndex = 0;
+      let autoTimer = null;
+
+      const carouselImg = document.getElementById("carouselImage");
+      const dotsContainer = document.getElementById("carouselDots");
+      const screenshotItems = document.querySelectorAll("#screenshotList li");
+
+      if (carouselImg && dotsContainer) {
+        // Build navigation dots
+        screenshots.forEach((item, i) => {
+          const btn = document.createElement("button");
+          btn.setAttribute("role", "tab");
+          btn.setAttribute("aria-label", item.label);
+          btn.setAttribute("aria-selected", i === 0 ? "true" : "false");
+          if (i === 0) btn.classList.add("active");
+          btn.addEventListener("click", () => switchToScreenshot(i));
+          dotsContainer.appendChild(btn);
+        });
+
+        function switchToScreenshot(index) {
+          if (index === activeIndex) return;
+          carouselImg.style.opacity = "0";
+          setTimeout(() => {
+            carouselImg.src = screenshots[index].src;
+            carouselImg.alt = screenshots[index].label;
+            carouselImg.style.opacity = "1";
+          }, 180);
+
+          dotsContainer.querySelectorAll("button").forEach((btn, i) => {
+            const isActive = i === index;
+            btn.classList.toggle("active", isActive);
+            btn.setAttribute("aria-selected", isActive ? "true" : "false");
+          });
+
+          screenshotItems.forEach((li, i) =>
+            li.classList.toggle("active", i === index),
+          );
+
+          activeIndex = index;
+          resetCarouselTimer();
+        }
+
+        function advanceCarousel() {
+          switchToScreenshot((activeIndex + 1) % screenshots.length);
+        }
+
+        function resetCarouselTimer() {
+          if (autoTimer) clearInterval(autoTimer);
+          autoTimer = setInterval(advanceCarousel, 3500);
+        }
+
+        screenshotItems.forEach((li) => {
+          li.addEventListener("click", () =>
+            switchToScreenshot(parseInt(li.dataset.index, 10)),
+          );
+        });
+
+        const phoneWrapper = document.querySelector(".screenshots-phone");
+        if (phoneWrapper) {
+          phoneWrapper.addEventListener("mouseenter", () => {
+            if (autoTimer) clearInterval(autoTimer);
+          });
+          phoneWrapper.addEventListener("mouseleave", resetCarouselTimer);
+        }
+
+        resetCarouselTimer();
+      }
+    </script>
+  </body>
+</html>
